@@ -7,3 +7,24 @@ body {
   width: 800px;
   background-color: #ffffff;
 }
+
+.padding-example {
+  border: 3px solid deeppink;
+  text-align: justify;
+  padding: 1em 3em 2em;
+  line-height: 1em;
+}
+
+.margin-example {
+  background-color: darkorange;
+  padding: 1em;
+  border: 3px solid black;
+  margin: 1em 0;
+}
+
+.example {
+  background-color: firebrick;
+  color: white;
+  border: 3px solid black;
+  margin: 2em;
+}
