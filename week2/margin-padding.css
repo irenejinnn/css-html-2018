@@ -1,11 +1,18 @@
 body {
   font: 16px arial;
   background-color: #c0c0c0;
+  margin: 8em;
 }
 
 .wrapper {
   width: 800px;
   background-color: #ffffff;
+  margin: 0 auto;
+  padding: 1em;
+}
+
+.wrapper h1 {
+  margin-top: 0;
 }
 
 .padding-example {
@@ -27,4 +34,23 @@ body {
   color: white;
   border: 3px solid black;
   margin: 2em;
+  /* padding: 1em; */
+}
+
+.example p {
+  margin: 3em;
+}
+
+.box {
+  background-color: aquamarine;
+  padding: 1em;
+  margin: 1em 0;
+}
+
+.box p:last-child {
+  margin-bottom: 0;
+}
+
+.box p:first-child {
+  margin-bottom:0;
 }
