@@ -6,12 +6,71 @@
   border-radius: 4px;
 }
 
+.link {
+  font-size:2em;
+  color:darkgoldenrod;
+  text-decoration: none;
+}
+
+.link:link {
+  color: darkmagenta;
+}
+
+.link:visited {
+  color: greenyellow;
+}
+
+.link.active {
+  color:hotpink;
+}
+
+.link:hover {
+  color: palevioletred;
+  text-decoration: underline;
+}
+.note:hover {
+  background-color: dodgerblue;
+  color: white;
+}
+
+.note:hover code {
+  background-color: aqua;
+  color: black;
+}
+
+.input {
+  border:2px solid black;
+  padding: .5em 1em;
+  border-radius: 4px;
+  font-size: 2em;
+}
+.input:focus {
+  border-color: hotpink;
+  outline: none;
+  width: 100%;
+}
+
 .quote {
   margin: 0;
   font-size: 1.5em;
   color: darkturquoise;
 }
 
+.quote p::before, .quote p::after {
+  color: hotpink;
+}
+
+.quote p::before {
+  content: "\201c";
+  /* content: "BEFORE"; */
+  /* display: block; */
+}
+/* shift+option+down arrow = copy to down */
+
+
+.quote p::after {
+  content: "\201d";
+}
 
 /* https://practicaltypography.com/straight-and-curly-quotes.html */
 /*

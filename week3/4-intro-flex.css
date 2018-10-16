@@ -12,14 +12,39 @@ body {
   padding: 0;
   list-style-type: none;
   border: 10px solid black;
-/*   height: 100vh; */
+  /* height: 600px; */
   display: flex;
+  /* flex-direction: column; */
+  /* flex-direction: column-reverse; */
+  /* flext-direction:row-reverse; */
+  /* justify-content: space-around; */
+  /* justify-content: space-around; */
+  /* align-items: flex-start; */
+    /* align-items: flex-end; */
+    /* justify-content: center;
+    align-items: center; */
+    /* flex-wrap: wrap;
+    align-content: space-between; */
 }
 
 .child {
   padding: 1rem;
   background-color: goldenrod;
   border: 10px solid darkgoldenrod;
+  /* order: 2; */
+  /* flex-grow: 1;   */
+  /* every item with same space */
+   flex: 1;
+}
+
+/* .item3 {
+  width:200px;
+} */
+.item3 {
+  /* order: 1; */
+  color:red;
+  /* flex-grow: 3; */
+  flex-basis: 400px;
 }
 
 /* .parent::before {
