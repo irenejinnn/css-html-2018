@@ -25,3 +25,52 @@ nav a:hover {
   color: lightseagreen;
   background-color: lightgray;
 }
+
+@media screen and (min-width: 768px) {
+  nav  {
+    background-color: deeppink;
+    /* the color will change to deeppin from lightseagreen when the width is bigger than 678px*/
+    /* 678 px is iPad Size */
+  }
+}
+@media screen and (width: 768px) {
+  nav {
+    background-color: orangered;
+    /* the color will change to deeppin from lightseagreen when the width is on 678px */
+  }
+  nav li {
+    flex: 1;
+  }
+  nac a {
+    padding 2em 0;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  /* 414px is iphone size */
+  html, body {
+    height: 100%;
+  }
+  nav ul {
+    flex-direction: column;
+    height: 100vh;
+  }
+
+  nav li {
+    flex: 1;
+    font-size: 2rem;
+    border-bottom: 2px solid seagreen;
+    display: flex;
+  }
+  nav li:last-child {
+    border-bottom: none;
+  }
+  nav a {
+    flex: 1;
+    /* the contents come to the center */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

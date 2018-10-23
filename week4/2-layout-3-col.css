@@ -1,4 +1,5 @@
 html, body {
+  min-height: 100%;
 }
 
 body {
@@ -11,6 +12,9 @@ body {
   background-color: #fff;
   width: 1000px;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+
 }
 
 .main-header {
@@ -24,11 +28,15 @@ body {
 }
 
 .row {
-
+display: flex;
 }
 
 .side-nav {
   background-color: #984b43;
+  flex: 0 0 200px;
+  /* flex: 0 0 50%; */
+  /* flex: 0 0 20vw; */
+  /* if flex change to 20vw, the side nav will grow up with the window, px won't  */
 }
 
 .side-nav ul {
@@ -56,6 +64,8 @@ body {
 .side-bar {
   padding: 1em;
   background-color: #eac67a;
+  flex: 0 1 300px;
+
 }
 
 .side-bar h2 {
@@ -64,6 +74,7 @@ body {
 
 .related-article {
   margin-bottom: 1em;
+  display: flex;
 }
 
 .related-article img {
