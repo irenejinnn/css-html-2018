@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Grid Names</title>
+    <style>
+    main {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: 100px 100px 600px 100px;
+        grid-template-areas:
+        "hd hd hd hd"
+        ". nv nv s"
+        "c c . s"
+        /* . means sapce */
+        "ft ft ft s"
+    }
+    header {
+        background-color: red;
+        grid-area: hd;
+    }
+    nav {
+        background-color: green;
+        grid-area: nv;
+    }
+    article {
+        background-color: blue;
+        grid-area: c;
+    }
+    footer {
+        background-color: black;
+        grid-area: ft;
+    }
+    aside {
+        background-color: aquamarine;
+        grid-area: s;
+    }
+    </style>
+</head>
+<body>
+    <main>
+    <header></header>
+    <nav></nav>
+    <article></article>
+    <aside></aside>
+    <footer></footer>
+</main>
+</body>
+</html>
