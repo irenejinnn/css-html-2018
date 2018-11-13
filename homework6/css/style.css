@@ -2,24 +2,27 @@
   box-sizing: border-box;
 }
 
-
-main {
-  display: grid;
-  grid-template-columns: repeat (13, 1fr);
-  grid-template-rows: auto auto 1fr auto auto;
-  
+html, body {
+min-height: 100%;
 }
+
 
 body {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   background-color: #c0c0c0;
   margin: 0;
+  display: grid;
+  grid-template-rows: 1fr;
 }
 
 .wrapper {
+  min-height:100vh;
   max-width: 1000px;
   margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: auto auto 1fr auto auto;
 }
 
 .global-header {
@@ -27,7 +30,7 @@ body {
   color: #fff;
   font-family: 'Oswald', sans-serif;
   padding: 1em;
-  grid-column: 1 / 13;
+  grid-column: 1 / -1;
 }
 
 .global-header h1 {
@@ -36,7 +39,7 @@ body {
 
 .global-nav {
   background-color: #DAC7A6;
-  grid-column: 1 / 13;
+  grid-column: 1 / -1;
 }
 
 .nav {
@@ -56,9 +59,9 @@ body {
 .content-area {
   padding: 1em;
   background-color: #fff;
-  grid-column: 1 / 9;
+  grid-column: 1 / 10;
   grid-row: 3 / 5;
-  
+  /* grid-row: span 3; */
 }
 
 .content-area h2 {
@@ -68,7 +71,7 @@ body {
 .related-content {
   background-color: #C58368;
   padding: 1em;
-  grid-column: 9 / 13;
+  grid-column: 10 / -1;
 }
 
 .related-content ul {
@@ -78,12 +81,12 @@ body {
 .spot {
   padding: 1em;
   background-color: #B6A78C;
-  grid-column: 9 / 13;
+  grid-column: 10 / -1;
 }
 
 .global-footer {
   background-color: #222;
   padding: 1em;
   color: #fff;
-  grid-column: 1 / 13;
+  grid-column: 1 / -1;
 }
