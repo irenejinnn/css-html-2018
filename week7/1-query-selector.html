@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Query Selectors</title>
+</head>
+<body>
+  <div class="wrapper">
+    <header class="header">
+      <h1>Select</h1>
+    </header>
+    <article>
+      <h2 id="title">Article Title</h2>
+      <p class="intro">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui, tenetur? Vitae tempora quos reiciendis consectetur exercitationem odit sit architecto omnis, aut, harum ipsum modi earum ducimus cum, deserunt incidunt cumque.</p>
+      <p>Delectus velit a, dicta cum temporibus esse accusantium consequatur. Illum eius laudantium quas incidunt nesciunt? Sint maxime esse, a reiciendis iure eveniet facilis. Aut delectus temporibus, tempore sint a numquam?</p>
+      <p>Voluptates repellendus alias, minus nulla, perferendis officia nemo mollitia, unde non qui necessitatibus eligendi numquam dignissimos eveniet tenetur dolorem sunt. Officia impedit blanditiis natus illo dicta! Provident similique aliquam explicabo.</p>
+      <ul>
+        <li>Lorem ipsum dolor sit.</li>
+        <li>Atque quam alias numquam!</li>
+        <li>Asperiores minus ab saepe.</li>
+        <li>Illum accusantium voluptatum quaerat?</li>
+      </ul>
+    </article>
+  </div>
+  <script>
+    // getElementById(idname)
+    var title = document.getElementById('title');
+    title.innerText = "Updated Title"; 
+    // update the title with 'innerText' 
+    console.log(title);
+
+    // querySelector(css selector)
+    var header = document.querySelector('.wrapper > header');
+    console.log(header);
+
+    var p = document.querySelector('p:(.intro)');
+    // p:(.intro) means just paragraph not class=intro part
+    console.log(p);
+
+    // querySelectorAll()
+  var allLis = document.querySelectorAll('li');
+  console.log(allLis);
+  
+  //  var review = (item) =>
+  // // OR function review(item) 
+  // {
+  //   console.log(item.textContent);
+  // }
+
+allLis.forEach((item) => {
+  console.log(item.textContent)
+}
+  </script>
+</body>
+</html>

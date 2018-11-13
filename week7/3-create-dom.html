@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Create DOM</title>
+</head>
+<body>
+  <script>
+    var newDiv = document.createElement('div');
+    var newContent = document.createTextNode('My New Div');
+    newDiv.setAttribute('id', 'myIdName');
+    newDiv.classList.add('active');
+    newDiv.style.color = "yellowgreen";
+    newDiv.appendChild(newContent);
+
+    newDiv.addEventListener('click', () => {
+      newDiv.style.fontSize = `3em`;
+    });
+
+    var body = document.querySelector('body');
+    body.appendChild(newDiv);
+
+  </script>
+</body>
+</html>

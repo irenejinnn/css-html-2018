@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Update the DOM</title>
+  <style>
+    .active {
+      color: blue;
+    }
+
+    .makeRed {
+      color: red;
+    }
+
+    button {
+      border: 1px solid gray;
+      background-color: gray;
+      padding: 1em;
+      font-size: 1em;
+      margin: 1em 0;
+      border-radius: 10px;
+      color:white;
+      display: block;
+      width: 50%;
+      transition: all .5s;
+    }
+
+    button.active {
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  
+  <div class="inner">
+    <h1></h1>
+  </div>
+
+  <div class="makeRed">
+    <span>Update Styles</span>
+  </div>
+
+  <div class="addClass">
+    <p>Class will added via JS</p>
+  </div>
+
+  <div class="example">
+    <p>Class will be removed via JS</p>
+  </div>
+  
+  <button onclick="toggleClass('.example')">Click Here</button>
+
+  <button class="clickMe">Add Event</button>
+  <script>
+
+    // update text
+    var date = new Date();
+    var hour = date.getHours();
+    var min = date.getMinutes();
+    var inner = document.querySelector('.inner h1');
+    inner.textContent = hour > 18 ? "Good Evening" : "Good Day";
+
+    // update styles
+    var makeRed = document.querySelector('.makeRed');
+    makeRed.style.color = "red";
+    makeRed.style.backgroundColor = "black";
+    // makeRed.style.padding = min + "px";
+    makeRed.style.padding = `${min}px`;
+
+    // add a class
+    const addClass = document.querySelector('.addClass');
+    addClass.classList.add('active');
+
+    function toggleClass(element) {
+      var el = document.querySelector(element);
+      el.classList.toggle("makeRed");
+    }
+
+    var button = document.querySelector('.clickMe');
+    button.addEventListener('click', () => {
+      // console.log('clicked');
+      // when click "Add Event", the clicks counted
+      button.classList.toggle('active');
+    });
+  </script>
+</body>
+</html>
